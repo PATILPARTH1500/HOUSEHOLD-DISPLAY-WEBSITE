@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vedic Roots | Pure Indian Staples</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== SMOOTH SCROLL ===== */
+html{
+  scroll-behavior: smooth;
+}
+
+/* offset for sticky navbar */
+section{
+  scroll-margin-top: 90px;
+}
+
+:root{
+  --bg: #FFF6DF;
+  --card: #FFFFFF; 
+  --text: #2B2B2B;
+  --leaf: #4E7C59;
+  --ghee: #E6C36A;
+  --muted: #7A766F;
+}
+
+
+body.dark{
+  --bg: #7f735c;
+  --card: #9a8466;
+  --text: #f5f3ef;
+  --muted: #e2ddd3;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+/* ===== FULL HEIGHT SECTIONS ===== */
+.full-height{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+.full-height.center{
+  text-align:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  padding:18px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  /* GLASS EFFECT */
+  background:rgba(255,255,255,0.55);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+
+  border-bottom:1px solid rgba(255,255,255,0.35);
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+
+body.dark nav{
+  background:rgba(30,28,24,0.55);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 8px 24px rgba(0,0,0,0.35);
+}
+
+
+.logo{
+  font-family:'Fraunces',serif;
+  font-size:1.5rem;
+  letter-spacing:1px;
+}
+
+.nav-links{
+  display:flex;
+  gap:26px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--text);
+  font-size:.9rem;
+  font-weight:500;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--ghee);
+  transition:.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.nav-actions{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  font-size:.9rem;
+}
+
+.toggle{
+  cursor:pointer;
+  font-size:1.1rem;
+}
+
+@media(max-width:900px){
+  .nav-links{
+    display:none;
+  }
+}
+
+/* HERO */
+
+/* ===== HERO SPLIT + SLIDER ===== */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
+
+.hero-content{
+  flex:1;
+}
+
+.hero-media{
+  flex:1;
+  max-width:520px;
+  position:relative;
+}
+
+/* ===== HERO SLIDER – SWIPE STYLE ===== */
+.hero-slider{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+  border-radius:10%;
+}
+
+.hero-track{
+  display:flex;
+  height:100%;
+  width:100%;
+  transition:transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.hero-track img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+
+
+/* ===== HERO CTA BUTTON ===== */
+.btn1{
+  margin-top:28px;
+  padding:14px 34px;
+  border-radius:999px;
+  border: none;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-family:'Inter',sans-serif;
+  font-size:.95rem;
+  font-weight:500;
+  color:#2B2B2B;
+
+  cursor:pointer;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+/* Hover */
+.btn1:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,0.85);
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Active */
+.btn1:active{
+  transform:translateY(0);
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Dark mode button */
+body.dark .btn1{
+  background:rgba(40,40,40,0.6);
+  color:#f5f3ef;
+}
+
+body.dark .btn1:hover{
+  background:rgba(40,40,40,0.8);
+}
+
+/* HERO SLIDER ARROWS */
+.hero-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,0.45);
+  backdrop-filter:blur(12px);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  cursor:pointer;
+  font-size:1.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-arrow.left{left:14px;}
+.hero-arrow.right{right:14px;}
+
+body.dark .hero-arrow{
+  background:rgba(40,40,40,0.45);
+  color:white;
+}
+/* ===== HERO BACKGROUND IMAGE ===== */
+.hero{
+  position:relative;
+  background:
+    linear-gradient(
+      rgba(255,246,223,0.70),
+      rgba(255,246,223,0.70)
+    ),
+    url("/assets/images/HERO.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+/* Dark mode hero background */
+body.dark .hero{
+  background:
+    linear-gradient(
+      rgba(127,115,92,0.50),
+      rgba(127,115,92,0.50)
+    ),
+    url("/assets/images/HERO.png");
+    background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.hero-content,
+.hero-media{
+  position:relative;
+  z-index:2;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+  .hero-slider img{
+    height:320px;
+  }
+}
+
+.hero{
+  padding:70px 8%;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.4rem,6vw,3.8rem);
+}
+.hero span{
+  color:var(--ghee);
+  font-style:italic;
+}
+.hero p{
+  opacity:.75;
+  max-width:440px;
+  margin-top:12px;
+}
+
+/* STORY */
+.story{
+  padding:70px 10%;
+  text-align:center;
+  max-width:100%;
+  margin:auto;
+}
+.story h2{
+  font-family:'Fraunces',serif;
+  margin-bottom:12px;
+}
+/* ===== ABOUT / STORY BACKGROUND ===== */
+.story{
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(255,246,223,0.7),
+      rgba(255,246,223,0.7)
+    ),
+    url("/assets/images/ABOUT.png");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark mode about background */
+body.dark .story{
+  background:
+    linear-gradient(
+      rgba(127,115,92,0.7),
+      rgba(127,115,92,0.7)
+    ),
+    url("/assets/images/ABOUT.png");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.story h2,
+.story p{
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== ABOUT SPLIT LAYOUT ===== */
+.about-wrap{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:70px;
+  padding:0 8%;
+}
+
+.about-content{
+  flex:1;
+  text-align:left;
+}
+
+.about-content h2{
+  font-family:'Fraunces',serif;
+  font-size:3.4rem;
+  margin-bottom:10px;
+}
+
+.about-content h4{
+  font-weight:500;
+  font-family: 'Fraunces','serif';
+  font-size: 2rem;
+  color:rgb(255, 166, 0);
+  margin-bottom:18px;
+}
+
+.about-content p{
+  max-width:520px;
+  font-size: 1rem;
+  opacity:.8;
+  line-height:1.7;
+}
+
+.about-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.about-image img{
+  width:100%;
+  max-width:420px;
+  height:420px;
+  object-fit:cover;
+  border-radius:26px;
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .about-wrap{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about-content{
+    text-align:center;
+  }
+
+  .about-image img{
+    height:300px;
+  }
+}
+
+/* SECTION */
+
+.section{
+  padding:80px 8% 40px;
+  position:relative;
+
+  background:
+    linear-gradient(
+      rgba(255,246,223,0.75),
+      rgba(255,246,223,0.75)
+    ),
+    url("/assets/images/SECTION.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+body.dark .section{
+  background:
+    linear-gradient(
+      rgba(35,32,26,0.6),
+      rgba(35,32,26,0.6)
+    ),
+    url("/assets/images/SECTION.png");
+     background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.section h2{
+  font-family:'Fraunces',serif;
+  font-size:2rem;
+}
+.section p{
+  opacity:.7;
+  max-width:500px;
+  margin-top:6px;
+}
+
+
+/* SLIDER */
+.slider-wrap{
+  position:relative;
+  margin-top:30px;
+}
+.slider{
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding-bottom:14px;
+}
+.slider::-webkit-scrollbar{
+  height:6px;
+}
+.slider::-webkit-scrollbar-thumb{
+  background:rgba(0,0,0,.25);
+  border-radius:10px;
+}
+body.dark .slider::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.25);
+}
+
+/* CARD */
+.card{
+  min-width:260px;
+  padding:18px;
+  border-radius:26px;
+  cursor:pointer;
+  scroll-snap-align:start;
+
+  background: rgba(47 0 0 / 21%);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.45),
+    0 35px 70px rgba(0,0,0,.35);
+}
+
+body.dark .card{
+  background: rgba(28 5 5 / 21%);
+  
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+}
+.card h3{
+  font-family:'Fraunces',serif;
+  margin-top:12px;
+}
+.card p{
+  font-size:.9rem;
+  opacity:.7;
+}
+.price{
+  font-weight:600;
+  margin-top:6px;
+}
+
+/* ARROWS */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  cursor:pointer;
+  font-size:1.3rem;
+}
+.arrow.left{left:-12px;}
+.arrow.right{right:-12px;}
+body.dark .arrow{
+  background:rgba(40,40,40,.6);
+  color:white;
+}
+
+/* FEATURES */
+.features{
+  padding:80px 8%;
+  text-align:center;
+}
+.feature-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+.feature{
+  background:var(--card);
+  padding:28px;
+  border-radius:26px;
+}
+/* ===== FEATURES BACKGROUND ===== */
+/* ===== WHY WE ARE BETTER SECTION ===== */
+
+.features{
+  padding:100px 8%;
+  text-align:center;
+  position:relative;
+
+  background:
+    linear-gradient(
+      rgba(255,246,223,0.75),
+      rgba(255,246,223,0.75)
+    ),
+    url("/assets/images/BETTER.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+body.dark .features{
+  background:
+    linear-gradient(
+      rgba(35,32,26,0.75),
+      rgba(35,32,26,0.75)
+    ),
+    url("/assets/images/BETTER.png");
+}
+
+/* GRID */
+.feature-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* GLASS CARD */
+.feature{
+  padding:32px;
+  border-radius:26px;
+  text-align:left;
+
+  background:rgba(255,255,255,0.45);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
+  box-shadow:0 30px 60px rgba(0,0,0,.18);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.feature:hover{
+  transform:translateY(-6px);
+  box-shadow:0 40px 80px rgba(0,0,0,.25);
+}
+
+body.dark .feature{
+  background:rgba(40,40,40,0.45);
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.feature h3{
+  font-family:'Fraunces',serif;
+  margin:10px 0 8px;
+}
+
+.feature p{
+  opacity:.8;
+  line-height:1.6;
+}
+
+/* COMPARISON STRIP */
+.compare-grid{
+  margin:70px auto 0;
+  max-width:900px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+}
+
+.compare-grid ul{
+  padding-left:18px;
+  line-height:1.9;
+  opacity:.85;
+}
+
+@media(max-width:800px){
+  .compare-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* REVIEWS */
+.reviews{
+  padding:90px 8%;
+  text-align:center;
+}
+.review-box{
+  max-width:600px;
+  margin:auto;
+  background:var(--card);
+  padding:32px;
+  border-radius:30px;
+  animation:float 4s ease-in-out infinite;
+}
+.reviews{
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(255,246,223,0.7),
+      rgba(255,246,223,0.7)
+    ),
+    url("/assets/images/REVIEW.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark mode features background */
+body.dark .reviews{
+  background:
+    linear-gradient(
+      rgba(127,115,92,0.7),
+      rgba(127,115,92,0.7)
+    ),
+    url("/assets/images/REVIEW.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes float{
+  50%{transform:translateY(-10px);}
+}
+
+/* FOOTER */
+footer{
+  background:#857357;
+  color:#ddd;
+  padding:70px 10% 40px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:40px;
+}
+footer h4{
+  margin-bottom:14px;
+  color:#fff;
+}
+footer a{
+  font-size:.9rem;
+  color:#bbb;
+  text-decoration:none;
+  display:block;
+  margin-bottom:8px;
+}
+.footer-bottom{
+  margin-top:40px;
+  text-align:center;
+  font-size:.8rem;
+  opacity:.6;
+}
+.product-modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(8px);
+  z-index:3000;
+
+  opacity:0;
+  pointer-events:none;
+  transition:.4s ease;
+}
+
+.product-modal.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.modal-content{
+  width:60vw;
+  max-width:900px;
+  background:rgba(255, 255, 255, 0.3);
+  backdrop-filter:blur(16px) saturate(-25%);
+  border-radius:30px;
+  padding:40px;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  transform:scale(.9);
+  transition:.4s ease;
+}
+
+.product-modal.active .modal-content{
+  transform:scale(1);
+}
+
+body.dark .modal-content{
+  background:rgba(89, 84, 72, 0.6);
+}
+
+.modal-close{
+  position:absolute;
+  top:18px;
+  right:22px;
+  background:none;
+  border:none;
+  font-size:1.4rem;
+  cursor:pointer;
+}
+
+.modal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.modal-image img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:24px;
+}
+
+@media(max-width:900px){
+  .modal-content{width:90vw;}
+  .modal-grid{grid-template-columns:1fr;}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">VEDIC ROOTS</div>
+
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#rice">Rice</a>
+    <a href="#pulses">Pulses</a>
+    <a href="#ghee">Ghee</a>
+    <a href="#pickles">Pickles</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="nav-actions">
+    <span class="toggle" onclick="toggleDark()">🌙</span>
+    <span>Bag · 0</span>
+  </div>
+</nav>
+
+<section class="hero full-height" id="home">
+
+  <div class="hero-content">
+    <h1>Pure <span>Indian Staples</span><br>Rooted in Tradition</h1>
+    <p>Slow food made the honest way.</p>
+    <button class="btn1">Explore More</button>
+  </div>
+
+  <div class="hero-media">
+   <div class="hero-slider">
+  <div class="hero-track">
+    <img src="/assets/images/HERO.png">
+    <img src="/assets/images/ABOUT.png">
+    <img src="/assets/images/BETTER.png">
+    <img src="/assets/images/REVIEW.png">
+  </div>
+
+  <button class="hero-arrow left" onclick="prevHero()">‹</button>
+  <button class="hero-arrow right" onclick="nextHero()">›</button>
+</div>
+
+  </div>
+
+</section>
+
+<section class="story full-height" id="about">
+  <div class="about-wrap">
+
+    <div class="about-content">
+      <h2>Rooted in Slow Living</h2>
+      <h4>From our farms to your family</h4>
+      <p>
+        We believe food should be honest, slow, and deeply connected to its roots.
+At Vedic Roots, every grain, pulse, and spice is sourced directly from farmers who still respect traditional methods of cultivation.
+Our products are minimally processed, free from shortcuts, and made in small batches to preserve natural taste and nutrition.
+We work closely with rural communities to ensure fair practices and long-term sustainability.
+From stone-ground grains to bilona-churned ghee, every step follows time-tested wisdom passed down through generations.
+What reaches your kitchen is not just food, but a return to purity, balance, and mindful living.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="/assets/images/ABOUT.png" alt="About Vedic Roots">
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="rice">
+<h2>Rice</h2>
+<p>Aromatic, unpolished, traditionally aged.</p>
+<div class="slider-wrap">
+<button class="arrow left" onclick="slide(this,-1)">‹</button>
+<div class="slider">
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price">₹899</div></div>
+
+  <div class="card" onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604908177522-937b15c93d2e?w=500"><h3>Brown Basmati</h3><p>High fiber rice</p><div class="price">₹799</div></div>
+</div>
+<button class="arrow right" onclick="slide(this,1)">›</button>
+</div>
+</section>
+
+<section class="section" id="pulses">
+<h2>Pulses</h2>
+<p>Protein-rich and naturally dried.</p>
+<div class="slider-wrap">
+<button class="arrow left" onclick="slide(this,-1)">‹</button>
+<div class="slider">
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1604909053062-5c6d58f35d90?w=500"><h3>Toor Dal</h3><p>Unpolished</p><div class="price">₹349</div></div>
+  
+</div>
+<button class="arrow right" onclick="slide(this,1)">›</button>
+</div>
+</section>
+
+<section class="section" id="ghee">
+<h2>Ghee</h2>
+<p>Bilona-churned A2 purity.</p>
+<div class="slider-wrap">
+<button class="arrow left" onclick="slide(this,-1)">‹</button>
+<div class="slider">
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=500"><h3>A2 Bilona Ghee</h3><p>Slow churned</p><div class="price">₹1999</div></div>
+</div>
+<button class="arrow right" onclick="slide(this,1)">›</button>
+</div>
+</section>
+
+<section class="section" id="pickles">
+<h2>Pickles</h2>
+<p>Sun-fermented & spice-rich.</p>
+<div class="slider-wrap">
+<button class="arrow left" onclick="slide(this,-1)">‹</button>
+<div class="slider">
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1599143338408-f740c05a3803?w=500"><h3>Mango Avakaya</h3><p>Traditional Andhra</p><div class="price">₹499</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+  <div class="card"  onclick="openModal(
+    'Heritage Basmati',
+    '₹899',
+    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
+  )"><img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500"><h3>Lemon Pickle</h3><p>Cold-pressed oil</p><div class="price">₹399</div></div>
+</div>
+<button class="arrow right" onclick="slide(this,1)">›</button>
+</div>
+</section>
+
+<section class="features full-height center">
+
+  <h2>What Makes Vedic Roots Different</h2>
+  <p style="max-width:520px; margin-top:14px; opacity:.75">
+    We don’t compete on labels. We compete on how food is grown, prepared, and delivered.
+  </p>
+
+  <div class="feature-grid">
+
+    <div class="feature">
+      🌾
+      <h3>Farm-Direct Sourcing</h3>
+      <p>
+        Every grain and pulse comes directly from farmers who still respect soil,
+        seasons, and traditional cultivation practices.
+      </p>
+    </div>
+
+    <div class="feature">
+      🧈
+      <h3>Traditional Methods</h3>
+      <p>
+        Stone-ground grains, bilona-churned ghee, and slow fermentation —
+        done in small batches, never rushed.
+      </p>
+    </div>
+
+    <div class="feature">
+      🚫
+      <h3>Minimal Processing</h3>
+      <p>
+        No preservatives, no artificial polishing, no shortcuts —
+        just food the way it was meant to be.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="compare-grid">
+
+    <div class="feature">
+      <h3>Most Brands</h3>
+      <ul>
+        <li>Mass production</li>
+        <li>Long supply chains</li>
+        <li>Heavy processing</li>
+        <li>Marketing-first approach</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <h3>Vedic Roots</h3>
+      <ul>
+        <li>Small-batch production</li>
+        <li>Direct farmer sourcing</li>
+        <li>Traditional processing</li>
+        <li>Process-first philosophy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p style="margin-top:70px; font-style:italic; opacity:.75">
+    We don’t scale by compromising. We grow by staying honest.
+  </p>
+
+</section>
+
+
+<section class="reviews full-height center">
+  <h2>What Families Say</h2>
+  <div class="review-box" id="reviewBox">
+    “This tastes exactly like homemade food.”
+  </div>
+  <div class="review-box" id="reviewBox">
+    “This tastes exactly like homemade food.”
+  </div>
+  <div class="review-box" id="reviewBox">
+    “This tastes exactly like homemade food.”
+  </div>
+  <div class="review-box" id="reviewBox">
+    “This tastes exactly like homemade food.”
+  </div>
+  <div class="review-box" id="reviewBox">
+    “This tastes exactly like homemade food.”
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h4>Vedic Roots</h4>
+      <p>Traditional Indian staples crafted with integrity.</p>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <a>Rice</a><a>Pulses</a><a>Ghee</a><a>Pickles</a>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <a>Contact</a><a>Shipping</a><a>Returns</a><a>FAQ</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a>Instagram</a><a>YouTube</a><a>Twitter</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Vedic Roots. All rights reserved.</div>
+</footer>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle('dark');
+}
+
+function slide(btn,dir){
+  const slider = btn.parentElement.querySelector('.slider');
+  slider.scrollLeft += dir * 300;
+}
+let heroIndex = 0;
+const track = document.querySelector('.hero-track');
+const slides = document.querySelectorAll('.hero-track img');
+
+function updateHero(){
+  track.style.transform = `translateX(-${heroIndex * 100}%)`;
+}
+
+function nextHero(){
+  heroIndex = (heroIndex + 1) % slides.length;
+  updateHero();
+}
+
+function prevHero(){
+  heroIndex = (heroIndex - 1 + slides.length) % slides.length;
+  updateHero();
+}
+
+/* INIT */
+updateHero();
+function openModal(title, price, desc, img){
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalPrice').innerText = price;
+  document.getElementById('modalDesc').innerText = desc;
+  document.getElementById('modalImg').src = img;
+
+  document.getElementById('productModal').classList.add('active');
+}
+
+function closeModal(){
+  document.getElementById('productModal').classList.remove('active');
+}
+  
+</script>
+<div class="product-modal" id="productModal">
+  <div class="modal-content">
+
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <div class="modal-grid">
+      <div class="modal-image">
+        <img id="modalImg">
+      </div>
+
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <h4 id="modalPrice"></h4>
+        <p id="modalDesc"></p>
+
+        <ul>
+          <li>✔ Farm-direct sourcing</li>
+          <li>✔ Traditionally processed</li>
+          <li>✔ No preservatives</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
