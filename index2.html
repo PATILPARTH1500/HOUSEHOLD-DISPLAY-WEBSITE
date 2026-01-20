@@ -890,71 +890,59 @@ What reaches your kitchen is not just food, but a return to purity, balance, and
 
 <div class="card" onclick="openModal(
   this,
-    'Heritage Basmati',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-  )">
+  'Heritage Basmati',
+  'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.'
+)">
   <img src="/assets/images/BASMATI_RICE.png">
   <h3>Heritage Basmati</h3>
   <p>Sun-aged long grains</p>
-  <div class="price"></div>
 </div>
 
 
-  <div class="card" onclick="openModal(
-    'Basmati Rice',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500"><h3>Heritage Basmati</h3><p>Sun-aged long grains</p><div class="price"></div></div>
-
-
-  <div class="card" onclick="openModal(
-    'Heritage Basmati',
-    '',
-    'Naturally aged basmati rice, grown using traditional methods and sun-dried for aroma.',
-    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800'
-  )"><img src="https://images.unsplash.com/photo-1604908177522-937b15c93d2e?w=500"><h3>Brown Basmati</h3><p>High fiber rice</p><div class="price">₹799</div></div>
+<div class="card" onclick="openModal(
+  this,
+  'Brown Rice',
+  'Unpolished basmati retaining bran layer, rich in fiber and minerals. Healthier alternative to white rice with nutty flavor.'
+)">
+  <img src="/assets/images/BROWN_RICE.png">
+  <h3>Brown Rice</h3>
+  <p>Healthy grains</p>
 </div>
+
+
+<div class="card" onclick="openModal(
+  this,
+  'Indrayani Rice',
+  'Fragrant local rice from Maharashtra, sticky texture when cooked. Loved for traditional Maharashtrian meals.'
+)">
+  <img src="/assets/images/INDRAYANI_RICE.png">
+  <h3>Indrayani Rice</h3>
+  <p>Traditional Maharashtrian meals grains</p>
+</div>
+
+
+<div class="card" onclick="openModal(
+  this,
+  'Kolam Rice',
+  'Short-grain aromatic rice popular in Maharashtra & Gujarat. Soft texture, ideal for everyday home cooking.'
+)">
+  <img src="/assets/images/KOLAM_RICE.png">
+  <h3>Kolam Rice</h3>
+  <p>Short-grain aromatic rice</p>
+</div>
+
+
+<div class="card" onclick="openModal(
+  this,
+  'Sona Masoori',
+  'Lightweight medium-grain rice from Andhra Pradesh & Karnataka. Easy to digest, commonly used for daily meals.'
+)">
+  <img src="/assets/images/SONA_MASOORI.png">
+  <h3>Sona Masoori</h3>
+  <p>Lightweight medium-grain rice</p>
+</div>
+
+
 <button class="arrow right" onclick="slide(this,1)">›</button>
 </div>
 </section>
@@ -1285,14 +1273,22 @@ function prevHero(){
 
 /* INIT */
 updateHero();
-function openModal(title, price, desc, img){
+function openModal(card, title, price, desc){
+  const imgSrc = card.querySelector('img').src;
+
   document.getElementById('modalTitle').innerText = title;
   document.getElementById('modalPrice').innerText = price;
   document.getElementById('modalDesc').innerText = desc;
-  document.getElementById('modalImg').src = img;
+  document.getElementById('modalImg').src = imgSrc;
+
+  // If you added image-price badge
+  if(document.getElementById('modalImagePrice')){
+    document.getElementById('modalImagePrice').innerText = price;
+  }
 
   document.getElementById('productModal').classList.add('active');
 }
+
 
 function closeModal(){
   document.getElementById('productModal').classList.remove('active');
